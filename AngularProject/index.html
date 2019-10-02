@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="./angular/angular.js"></script> <!-- Angular js library-->
+        <script src="./angular/angular-route.js"></script>
+        <script src="./src/index.js"></script> <!-- Custom ng-app and controllers-->
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    </head>
+    <body ng-app="myApp">
+        <h4>Login</h4>
+        <section  >
+            <ng-view></ng-view>
+        </section>
+        <table border="1px solid gray" ng-controller="authController">
+            <tr>
+                <th>id</th>
+                <th>email</th>
+            </tr>
+            <tr ng-repeat="ppl in data.data">
+                <td>{{ppl.id}}</td>
+                <td>{{ppl.email}}</td>
+            </tr>
+        </table>
+        
+
+    </body>
+</html>
